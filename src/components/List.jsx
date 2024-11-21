@@ -2,7 +2,7 @@ import { useState } from "react";
 import Item from "./Item";
 import Switch from "./Switch";
 
-const List = ({ todos, listBoxref, onDispatch }) => {
+const List = ({ todos, listBoxRef, onDispatch }) => {
   const [isSorted, setIsSorted] = useState(false);
   // 依據 isSorted 狀態決定是否改變排序(未完成在上方；完成在下方)，並將結果賦予到變數 newTodos 中
   let newTodos;
@@ -32,7 +32,7 @@ const List = ({ todos, listBoxref, onDispatch }) => {
     <>
       <div
         className="h-[232px] overflow-x-hidden text-second relative scroll-smooth pl-5"
-        ref={listBoxref}
+        ref={listBoxRef}
       >
         {newTodos.length === 0
           ? "You have nothing to do."

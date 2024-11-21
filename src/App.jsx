@@ -57,6 +57,7 @@ const App = () => {
   return (
     <>
       <main
+        // 當事項數量大於 4 時會顯示 scrollbar，版面寬度增加給 scrollbar 的空間
         className={`mainBackgroundColor ${todos.length > 4 ? "w-[408px]" : "contentWide"} h-[550px] flex flex-col justify-between overflow-hidden shadow-md relative`}
       >
         <section>
@@ -66,7 +67,7 @@ const App = () => {
             <hr className="my-2 border-[1.5px] border-third" />
             <ProgressBar todos={todos} />
           </div>
-          <List todos={todos} listBoxref={listBoxRef} onDispatch={dispatch} />
+          <List todos={todos} listBoxRef={listBoxRef} onDispatch={dispatch} />
         </section>
         <section className="contentWide p-5">
           <Input rollToBottom={rollToBottom} onDispatch={dispatch} />

@@ -14,6 +14,7 @@ const ProgressBar = ({ todos }) => {
       <div className="w-full h-4 bg-white ml-2 rounded-full">
         <div
           className="h-full bg-[rgb(154,175,238)] rounded-full transition-all"
+          // 沒有事項加入時，顯示 0%
           style={{
             width: `${todos.length === 0 ? initPersent : completePersent}`,
           }}
