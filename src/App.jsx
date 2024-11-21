@@ -45,8 +45,8 @@ const App = () => {
   useEffect(() => {
     if (isAdd && listBoxRef.current) {
       listBoxRef.current.scrollTop = listBoxRef.current.scrollHeight;
+      setIsAdd(false);
     }
-    setIsAdd(false);
   }, [isAdd]);
 
   // 將 isAdd 設為 true 的 setter function 包成函式，傳遞到 Input 組件的 prop
